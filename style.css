@@ -196,6 +196,16 @@ body {
     .content {
         margin: 3rem 1rem;
     }
+    .session-button {
+        width: 14rem; /* smaller width */
+        height: 4.8rem; /* slightly smaller height */
+        padding: 0.8rem;
+        
+      }
+    
+      .session-button-text {
+        font-size: 1.2rem; /* slightly smaller font */
+      }
 }
 
 /* Touch optimization */
