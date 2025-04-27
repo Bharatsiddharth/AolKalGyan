@@ -70,6 +70,14 @@ body {
     text-align: center;
 }
 
+.session-button.active {
+    background: black;
+}
+
+.session-button.active .session-button-text {
+    color: white;
+}
+
 /* Content */
 .content {
     background: #3D1A26;
@@ -87,7 +95,7 @@ body {
     display: none;
     flex-direction: row;
     align-items: center;
-    max-width: 102rem;
+    max-width: 105rem;
     gap: 8.2rem;
     width: 100%;
     padding: 2rem;
@@ -168,6 +176,16 @@ body {
     .text p {
         max-width: 100%;
     }
+    .session-button {
+        width: 18rem; /* smaller width */
+        height: 6rem; /* slightly smaller height */
+        padding: 1.4rem;
+        
+      }
+    
+      .session-button-text {
+        font-size: 1.2rem; /* slightly smaller font */
+      }
 }
 
 @media (max-width: 768px) {
@@ -180,6 +198,7 @@ body {
         gap: 3rem;
         padding: 1rem;
     }
+    
 }
 
 @media (max-width: 480px) {
