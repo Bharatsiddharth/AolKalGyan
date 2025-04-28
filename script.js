@@ -10,6 +10,21 @@ const bgColors = {
   approach: '#2D1A2F'
 };
 
+// Function to update background
+function updateBackground(tabId) {
+  const bg = bgColors[tabId];
+  if (bg) {
+    content.style.backgroundColor = bg;
+  }
+}
+
+// Set initial background based on the active tab
+const initialActiveTab = document.querySelector('.tab-content.active');
+if (initialActiveTab) {
+  updateBackground(initialActiveTab.id);
+}
+
+// On click
 tabButtons.forEach(button => {
   button.addEventListener('click', () => {
     // Remove active classes
@@ -22,91 +37,7 @@ tabButtons.forEach(button => {
     document.getElementById(tabId).classList.add('active');
 
     // Update background based on active tab
-    const bg = bgColors[tabId];
-    if (bg) {
-      content.style.backgroundColor = bg;
-    }
+    updateBackground(tabId);
   });
 });
-
-
-
-/* First card theme */
-// .content {
-//     background: #3D1A26;
-// }
-
-// .text h2 {
-//     color: #D4AF37;
-// }
-
-// .text p {
-//     color: #F5F5F0;
-// }
-
-// .book-button {
-//     background: #B57A90;
-//     transition: all ease-in-out 0.2s;
-// }
-
-
-
-/* second card theme green */
-// .content {
-//     background: #1D3B32;
-// }
-
-// .text h2 {
-//     color: #D4AF37;
-// }
-
-// .text p {
-//     color: #F5F5F0;
-// }
-
-// .book-button {
-//     background: #7AB0A0;
-//     transition: all ease-in-out 0.2s;
-// }
-
-
-
-/* Third card theme */
-// .content {
-//     background: #3C2A21;
-// }
-
-// .text h2 {
-//     color: #DBBA5F;
-// }
-
-// .text p {
-//     color: #F8F3E9;
-// }
-
-// .book-button {
-//     background: #93644F;
-//     transition: all ease-in-out 0.2s;
-// }
-
-
-
-
-/* Fourth card theme */
-// .content {
-//     background: #2D1A2F;
-// }
-
-// .text h2 {
-//     color: #E0A687;
-// }
-
-// .text p {
-//     color: #F9F4EC;
-// }
-
-// .book-button {
-//     background: #9C4D6F;
-//     transition: all ease-in-out 0.2s;
-// }
 
