@@ -41,3 +41,7 @@ tabButtons.forEach(button => {
   });
 });
 
+
+function toggleFAQ(element) {
+  element.classList.toggle('active');
+}
