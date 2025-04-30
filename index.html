@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Insight Sessions</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Playfair+Display:wght@800&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Playfair+Display:wght@800&family=Raleway:wght@500&display=swap"
+    rel="stylesheet">
   <style>
     /* Base Reset */
-    
+
     body {
       font-family: 'Lato', sans-serif;
       background: #fff;
       color: #333;
       line-height: 1.6;
-      padding: 2rem 1rem; /* 20px 10px */
+      padding: 2rem 1rem;
+      /* 20px 10px */
     }
 
     .faq-container {
       width: 100%;
-      max-width: 120rem; /* 1200px */
+      max-width: 120rem;
+      /* 1200px */
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: clamp(1.5rem, 3vw, 2rem); /* 15px-20px */
-      padding: 0 1rem; /* 0 10px */
+      gap: clamp(1.5rem, 3vw, 2rem);
+      /* 15px-20px */
+      padding: 0 1rem;
+      /* 0 10px */
     }
 
     .faq-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3.2rem, 5vw, 4.8rem); /* 32px-48px */
+      font-size: clamp(3.2rem, 5vw, 4.8rem);
+      /* 32px-48px */
       font-weight: 800;
       color: #8E3A59;
       text-align: center;
       letter-spacing: 0.05em;
-      text-shadow: 0rem 0.1rem 0.2rem rgba(90, 38, 57, 0.10); /* 0px 1px 2px */
-      border-bottom: 0.3rem solid rgba(212, 175, 55, 0.30); /* 3px */
-      padding-bottom: 0.75rem; /* 7.5px */
+      text-shadow: 0rem 0.1rem 0.2rem rgba(90, 38, 57, 0.10);
+      /* 0px 1px 2px */
+      border-bottom: 0.3rem solid rgba(212, 175, 55, 0.30);
+      /* 3px */
+      padding-bottom: 0.75rem;
+      /* 7.5px */
       width: fit-content;
       margin: 0 auto;
     }
@@ -48,21 +59,28 @@
     }
 
     .faq-category {
-      font-size: clamp(2.4rem, 3vw, 3.6rem); /* 24px-36px */
+      font-size: clamp(2.4rem, 3vw, 3.6rem);
+      /* 24px-36px */
       font-family: 'Raleway', sans-serif;
       font-weight: 500;
       color: #5A2639;
-      padding-left: 0.5rem; /* 5px */
-      margin: 1rem 0; /* 10px 0 */
+      padding-left: 0.5rem;
+      /* 5px */
+      margin: 1rem 0;
+      /* 10px 0 */
     }
 
     .faq-item {
       width: 100%;
-      padding: 1.25rem; /* 12.5px */
+      padding: 1.25rem;
+      /* 12.5px */
       background: rgba(181, 122, 144, 0.15);
-      box-shadow: 0rem 0.2rem 0.5rem rgba(90, 38, 57, 0.20); /* 0px 2px 5px */
-      border-radius: 0.6rem; /* 6px */
-      outline: 0.1rem solid rgba(90, 38, 57, 0.15); /* 1px */
+      box-shadow: 0rem 0.2rem 0.5rem rgba(90, 38, 57, 0.20);
+      /* 0px 2px 5px */
+      border-radius: 0.6rem;
+      /* 6px */
+      outline: 0.1rem solid rgba(90, 38, 57, 0.15);
+      /* 1px */
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -71,20 +89,26 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem; /* 10px */
-      font-size: clamp(1.76rem, 2.5vw, 2.24rem); /* 17.6px-22.4px */
+      gap: 1rem;
+      /* 10px */
+      font-size: clamp(1.76rem, 2.5vw, 2.24rem);
+      /* 17.6px-22.4px */
       font-weight: 500;
     }
 
     .arrow {
       flex-shrink: 0;
-      width: 0.75rem; /* 7.5px */
-      height: 0.75rem; /* 7.5px */
+      width: 0.75rem;
+      /* 7.5px */
+      height: 0.75rem;
+      /* 7.5px */
       border: solid #D4AF37;
-      border-width: 0.2rem 0.2rem 0 0; /* 2px 2px 0 0 */
+      border-width: 0.2rem 0.2rem 0 0;
+      /* 2px 2px 0 0 */
       transform: rotate(135deg);
       transition: transform 0.3s ease;
-      margin-left: 0.5rem; /* 5px */
+      margin-left: 0.5rem;
+      /* 5px */
     }
 
     .faq-item.active .arrow {
@@ -92,11 +116,14 @@
     }
 
     .faq-answer {
-      margin-top: 0.75rem; /* 7.5px */
+      margin-top: 0.75rem;
+      /* 7.5px */
       display: none;
-      font-size: clamp(1.6rem, 2vw, 1.76rem); /* 16px-17.6px */
+      font-size: clamp(1.6rem, 2vw, 1.76rem);
+      /* 16px-17.6px */
       line-height: 1.5;
-      padding-right: 1.5rem; /* 15px */
+      padding-right: 1.5rem;
+      /* 15px */
     }
 
     .faq-item.active .faq-answer {
@@ -104,221 +131,587 @@
     }
 
     /* Mobile Optimization */
-    @media (max-width: 76.8rem) { /* 768px */
+    @media (max-width: 76.8rem) {
+
+      /* 768px */
       body {
-        padding: 1.5rem 0.5rem; /* 15px 5px */
+        padding: 1.5rem 0.5rem;
+        /* 15px 5px */
       }
 
       .faq-section {
-        margin-top: 1.5rem; /* 15px */
+        margin-top: 1.5rem;
+        /* 15px */
       }
 
       .faq-item {
-        padding: 1rem; /* 10px */
+        padding: 1rem;
+        /* 10px */
       }
 
       .faq-question {
-        font-size: 1.76rem; /* 17.6px */
+        font-size: 1.76rem;
+        /* 17.6px */
       }
 
       .arrow {
-        width: 0.6rem; /* 6px */
-        height: 0.6rem; /* 6px */
+        width: 0.6rem;
+        /* 6px */
+        height: 0.6rem;
+        /* 6px */
       }
     }
 
-    @media (max-width: 48rem) { /* 480px */
+    @media (max-width: 48rem) {
+
+      /* 480px */
       .faq-title {
-        font-size: 2.8rem; /* 28px */
-        padding-bottom: 0.5rem; /* 5px */
+        font-size: 2.8rem;
+        /* 28px */
+        padding-bottom: 0.5rem;
+        /* 5px */
       }
 
       .faq-category {
-        font-size: 2.08rem; /* 20.8px */
-        margin: 0.5rem 0; /* 5px 0 */
+        font-size: 2.08rem;
+        /* 20.8px */
+        margin: 0.5rem 0;
+        /* 5px 0 */
       }
 
       .faq-question {
-        font-size: 1.6rem; /* 16px */
+        font-size: 1.6rem;
+        /* 16px */
         line-height: 1.3;
       }
 
       .faq-answer {
-        font-size: 1.52rem; /* 15.2px */
+        font-size: 1.52rem;
+        /* 15.2px */
       }
     }
-</style>
+
+
+
+    /* testinomial code */
+    
+    .container {
+      width: 100%;
+      padding: 4rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+      height: 150vh;
+    }
+
+    .header {
+      /* border-bottom: 3px solid rgba(212, 175, 55, 0.3); */
+      padding-bottom: 1.6rem;
+      width: 90%;
+      max-width: 120rem;
+      text-align: center;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .title {
+      color: #8E3A59;
+      border-bottom: 3px solid rgba(212, 175, 55, 0.3);
+      width: fit-content;
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-shadow: 0px 1px 2px rgba(90, 38, 57, 0.1);
+      margin: 0 2rem;
+    }
+
+    .masonry-grid {
+      column-count: 1;
+      column-gap: 2rem;
+      width: 100%;
+      max-width: 120rem;
+      padding-right: 1rem;
+      margin: 0 auto;
+      flex: 1;
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .masonry-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonial-card {
+      break-inside: avoid;
+      background: linear-gradient(90deg, #F9F7F8 0%, rgba(181, 122, 144, 0.1) 100%);
+      box-shadow: 0px 1rem 2rem rgba(90, 38, 57, 0.08);
+      border-radius: 0.8rem;
+      border: 1px solid rgba(142, 58, 89, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      width: 100%;
+    }
+
+    .testimonial-text {
+      color: #333333;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 1.4rem;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .user-image {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+      background: #D9D9D9;
+      border: 2px solid rgba(247, 243, 239, 0.2);
+      flex-shrink: 0;
+    }
+
+    .user-name {
+      color: #8E3A59;
+      font-size: 1.4rem;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+    }
+
+    .user-role {
+      color: #777777;
+      font-size: 1.2rem;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 200;
+    }
+
+    .button {
+      background: #1A1A2E;
+      border-radius: 2.4rem;
+      padding: 1rem 2rem;
+      border: 2px solid #D4AF37;
+      cursor: pointer;
+      margin-top: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .button-text {
+      color: #D4AF37;
+      font-size: 1.4rem;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+    }
+
+    @media (min-width: 48em) {
+
+      /* 768px */
+      .masonry-grid {
+        column-count: 2;
+        column-gap: 3rem;
+      }
+
+      .testimonial-card {
+        padding: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .user-image {
+        width: 3.7rem;
+        height: 3.7rem;
+      }
+    }
+
+    @media (min-width: 64em) {
+
+      /* 1024px */
+      .masonry-grid {
+        column-count: 3;
+        column-gap: 4rem;
+      }
+
+      .testimonial-text {
+        font-size: 1.8rem;
+      }
+
+      .user-name {
+        font-size: 1.6rem;
+      }
+
+      .user-role {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (min-width: 90em) {
+
+      /* 1440px */
+      .container {
+        padding: 6.4rem 0;
+      }
+
+      .testimonial-card {
+        padding: 4rem;
+      }
+    }
+
+    @media (hover: hover) {
+      .button:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+  </style>
 </head>
+
 <body>
- <section class="insight-section" >
+  <section class="insight-section">
     <section class="header">
-        <h1>Access Insights From<br>Your Past, Present and Future</h1>
-        <div class="buttons">
-           
-          <button class="session-button active" data-tab="guidance">
-            <h4 class="session-button-text">Intuitive Guidance</h4>
-           </button>
-          <button class="session-button" data-tab="sessions">
-            <h4 class="session-button-text">1:1 Sessions</h4>
-            </button>
-          <button class="session-button" data-tab="scheduling">
-            <h4 class="session-button-text">Flexible Scheduling</h4>
-            </button>
-          <button class="session-button" data-tab="approach">
-            <h4 class="session-button-text">Universal Approach</h4>
-            </button>
-        </div>
-      </section>
-    
-      <section class="content">
-        <div class="tab-content active" id="guidance">
-          <img src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>Intuitive Guidance</h2>
-            <p>Tapping into the intuitive space, scanners go beyond subjective information to provide clear, unbiased insights on problems you may be facing.</p>
-            <a href="#" class="book-button">
-                <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-    
-        <div class="tab-content" id="sessions">
-          <img src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>1:1 Sessions</h2>
-            <p>Within 10-12 minutes, the scanner will connect with your past, present and future to provide personalized guidance.</p>
-            <a href="#" class="book-button">
-                <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-    
-        <div class="tab-content" id="scheduling">
-          <img src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>Flexible Scheduling</h2>
-            <p>Our digital platform connects you with scanners globally, allowing you to experience scanning in an intimate in-person session or at the convenience of your home</p>
-            <a href="#" class="book-button">
-                <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-    
-        <div class="tab-content" id="approach">
-          <img src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>Universal Approach</h2>
-            <p>We embrace a universal approach, making sure that insights are inclusive, compassionate, and accessible to all individuals.</p>
-            <a href="#" class="book-button">
-                <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-      </section>
- </section>
+      <h1>Access Insights From<br>Your Past, Present and Future</h1>
+      <div class="buttons">
 
- <section class="FAQ">
-  <div class="faq-container">
-    <div class="faq-title">Frequently Asked Questions</div>
+        <button class="session-button active" data-tab="guidance">
+          <h4 class="session-button-text">Intuitive Guidance</h4>
+        </button>
+        <button class="session-button" data-tab="sessions">
+          <h4 class="session-button-text">1:1 Sessions</h4>
+        </button>
+        <button class="session-button" data-tab="scheduling">
+          <h4 class="session-button-text">Flexible Scheduling</h4>
+        </button>
+        <button class="session-button" data-tab="approach">
+          <h4 class="session-button-text">Universal Approach</h4>
+        </button>
+      </div>
+    </section>
 
-    <!-- Section 1 -->
-    <div class="faq-section">
-      <div class="faq-category">Preparing For Your Session</div>
-
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          Do I need to prepare for a scanning session?
-          <div class="arrow"></div>
-        </div>
-        <div class="faq-answer">
-          No special preparation is required. Just come with an open mind in a quiet and undisturbed environment.
+    <section class="content">
+      <div class="tab-content active" id="guidance">
+        <img
+          src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Lotus Image" class="image">
+        <div class="text">
+          <h2>Intuitive Guidance</h2>
+          <p>Tapping into the intuitive space, scanners go beyond subjective information to provide clear, unbiased
+            insights on problems you may be facing.</p>
+          <a href="#" class="book-button">
+            <div class="book-button-text">Book Your Session</div>
+          </a>
         </div>
       </div>
 
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          What information do I need to provide before my session?
-          <div class="arrow"></div>
-        </div>
-        <div class="faq-answer">
-          Only basic booking details like name and contact. The scanner connects intuitively with your timeline.
+      <div class="tab-content" id="sessions">
+        <img
+          src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Lotus Image" class="image">
+        <div class="text">
+          <h2>1:1 Sessions</h2>
+          <p>Within 10-12 minutes, the scanner will connect with your past, present and future to provide
+            personalized guidance.</p>
+          <a href="#" class="book-button">
+            <div class="book-button-text">Book Your Session</div>
+          </a>
         </div>
       </div>
 
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          Is there anything I should or shouldn't do before a session?
-          <div class="arrow"></div>
+      <div class="tab-content" id="scheduling">
+        <img
+          src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Lotus Image" class="image">
+        <div class="text">
+          <h2>Flexible Scheduling</h2>
+          <p>Our digital platform connects you with scanners globally, allowing you to experience scanning in an
+            intimate in-person session or at the convenience of your home</p>
+          <a href="#" class="book-button">
+            <div class="book-button-text">Book Your Session</div>
+          </a>
         </div>
-        <div class="faq-answer">
-          Avoid alcohol or substances 24 hours prior. Being well-rested and meditating helps.
+      </div>
+
+      <div class="tab-content" id="approach">
+        <img
+          src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Lotus Image" class="image">
+        <div class="text">
+          <h2>Universal Approach</h2>
+          <p>We embrace a universal approach, making sure that insights are inclusive, compassionate, and accessible to
+            all individuals.</p>
+          <a href="#" class="book-button">
+            <div class="book-button-text">Book Your Session</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="FAQ">
+    <div class="faq-container">
+      <div class="faq-title">Frequently Asked Questions</div>
+
+      <!-- Section 1 -->
+      <div class="faq-section">
+        <div class="faq-category">Preparing For Your Session</div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Do I need to prepare for a scanning session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            No special preparation is required. Just come with an open mind in a quiet and undisturbed environment.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            What information do I need to provide before my session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Only basic booking details like name and contact. The scanner connects intuitively with your timeline.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Is there anything I should or shouldn't do before a session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Avoid alcohol or substances 24 hours prior. Being well-rested and meditating helps.
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="faq-section">
+        <div class="faq-category">Booking & Logistics</div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Is there a fee for scanning sessions?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            You’ll receive a donation link post-session to contribute any amount towards Art of Living's social
+            projects.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            How do I find an available scanner?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Use our portal to view available scanners. Book at least 1 hour ahead, or 1-2 weeks in advance for some.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            What should I do if I need to cancel or reschedule?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Kindly inform KG via WhatsApp or phone well in advance, so the slot can be reassigned.
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="faq-section">
+        <div class="faq-category">Privacy and Follow-up</div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Is my personal information kept confidential?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Yes, all information and session content is kept strictly confidential as per our privacy policy.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Can I repeat a scanning session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Yes, but there should be at least a 30–45 day gap between sessions.
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Section 2 -->
-    <div class="faq-section">
-      <div class="faq-category">Booking & Logistics</div>
 
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          Is there a fee for scanning sessions?
-          <div class="arrow"></div>
-        </div>
-        <div class="faq-answer">
-          You’ll receive a donation link post-session to contribute any amount towards Art of Living's social projects.
-        </div>
+
+  <section>
+    <div class="container">
+      <div class="header">
+        <h1 class="title">Our Wall Of Love</h1>
       </div>
-
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          How do I find an available scanner?
-          <div class="arrow"></div>
+  
+      <div class="masonry-grid">
+        <!-- Testimonial Cards (Repeated 10 times with varying content) -->
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+            <span>There's also been a positive shift in a significant relationship.</span>
+            <span>I'm so grateful for this process, thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
         </div>
-        <div class="faq-answer">
-          Use our portal to view available scanners. Book at least 1 hour ahead, or 1-2 weeks in advance for some.
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+            <span>There's also been a positive shift in a significant relationship.</span>
+            <span>I'm so grateful for this process, thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
         </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+            <span>There's also been a positive shift in a significant relationship.</span>
+            <span>I'm so grateful for this process, thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+  
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+  
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+            <span>There's also been a positive shift in a significant relationship.</span>
+            <span>I'm so grateful for this process, thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+            <span>There's also been a positive shift in a significant relationship.</span>
+            <span>I'm so grateful for this process, thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+            <span>There's also been a positive shift in a significant relationship.</span>
+            <span>I'm so grateful for this process, thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Repeat other testimonial cards here with varying text styles -->
+  
       </div>
-
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          What should I do if I need to cancel or reschedule?
-          <div class="arrow"></div>
-        </div>
-        <div class="faq-answer">
-          Kindly inform KG via WhatsApp or phone well in advance, so the slot can be reassigned.
-        </div>
+  
+      <div class="button">
+        <div class="button-text">Share Your Testimonial</div>
       </div>
     </div>
-
-    <!-- Section 3 -->
-    <div class="faq-section">
-      <div class="faq-category">Privacy and Follow-up</div>
-
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          Is my personal information kept confidential?
-          <div class="arrow"></div>
-        </div>
-        <div class="faq-answer">
-          Yes, all information and session content is kept strictly confidential as per our privacy policy.
-        </div>
-      </div>
-
-      <div class="faq-item" onclick="toggleFAQ(this)">
-        <div class="faq-question">
-          Can I repeat a scanning session?
-          <div class="arrow"></div>
-        </div>
-        <div class="faq-answer">
-          Yes, but there should be at least a 30–45 day gap between sessions.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <script src="script.js">
   </script>
 </body>
+
 </html>
