@@ -1,4 +1,16 @@
-const tabButtons = document.querySelectorAll('.session-button');
+const bgVideo = document.getElementById('bgVideo');
+
+// Pause the video on page load
+window.addEventListener('DOMContentLoaded', () => {
+  bgVideo.pause();
+});
+
+// Play video when "Know More" button is clicked
+function playBackgroundVideo() {
+  bgVideo.play();
+}
+
+const tabButtons = document.querySelectorAll('.session-button2');
 const tabContents = document.querySelectorAll('.tab-content');
 const content = document.querySelector('.content');
 
