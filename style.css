@@ -15,7 +15,7 @@ body {
 }
 
 /* Header */
-.header {
+.header1 {
     text-align: center;
     padding: 4rem 2rem;
     background: #f9f9f9;
@@ -25,7 +25,7 @@ body {
     gap: 4.2rem;
 }
 
-.header h1 {
+.header1 h1 {
     color: #5A2639;
     font-size: clamp(3.2rem, 5vw, 4.8rem);
     font-weight: 800;
@@ -251,7 +251,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .header {
+    .header1 {
         padding: 3rem 1rem;
         gap: 3rem;
     }
