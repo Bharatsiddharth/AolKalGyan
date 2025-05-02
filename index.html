@@ -15,36 +15,53 @@
   <!-- HOME PAGE -->
   <section class="HomePage">
     <!-- Navbar -->
-  <div class="navbar">
-    <img src="/LOGO.png" alt="The Art of Living Logo" />
-    <div class="language-selector">
-      India - English ▼
-    </div>
-  </div>
-
-  <!-- Main Container -->
-  <div class="container1">
-    <div class="background">
-      <!-- Background Video -->
-      <div class="overlay"></div>
-      <video id="bgVideo" loop muted playsinline>
-        <source src="Makeshift.MOV" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <!-- Content on top -->
-    <div class="content1">
-      <div class="text-section1">
-        <h1>Discover clarity when uncertainty clouds your path.</h1>
-        <p>Scanning reveals what you need to know, when you need it most.</p>
-      </div>
-      <div class="buttons">
-        <button class="book-session">Book Your Session</button>
-        <button class="know-more" onclick="playBackgroundVideo()" style="display: flex; justify-content: center; gap: 20px; align-items: center;"> <span><img src="/Vector.png" alt=""></span> Know More</button>
+    <div class="navbar">
+      <img src="/LOGO.png" alt="The Art of Living Logo" />
+      <div class="language-selector">
+        India - English ▼
       </div>
     </div>
-  </div>
+
+    <!-- Main Container -->
+    <div class="container1">
+      <div class="background">
+        <div class="overlay"></div>
+        <!-- <video id="bgVideo" loop muted playsinline autoplay>
+          <source src="Untitled design-2.gif" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> -->
+        <img id="bgVideo" src="Untitled design-2.gif" alt="Background Animation" />
+      </div>
+    
+      <!-- Original Content -->
+      <div class="content1" id="mainContent">
+        <div class="text-section1">
+          <h1>Discover clarity when uncertainty clouds your path.</h1>
+          <p>Scanning reveals what you need to know, when you need it most.</p>
+        </div>
+        <div class="buttons">
+          <button class="book-session">Book Your Session</button>
+          <button class="know-more" onclick="playFullVideo()">
+            <img src="/Vector.png" alt=""> Know More
+          </button>
+        </div>
+      </div>
+    
+      <!-- Video Content -->
+      <div class="video-container" id="videoContent">
+        <button class="close-btn" onclick="closeVideo()">×</button>
+        <iframe 
+        src="https://www.youtube.com/embed/y34dS0JJ3fg?autoplay=1&mute=1"
+          id="fullVideo"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allowfullscreen
+          allow="autoplay"
+        ></iframe>
+      </div>
+    </div>
+    
   </section>
 
   <!-- INSIGHT SECTION -->
@@ -132,52 +149,52 @@
   <section>
     <div class="Solutions-container">
       <div class="solutions-section">
-          <div class="categories-container">
-              <div class="solutions-heading">
-                  <h2>Scanning Reveals Solutions For:</h2>
-              </div>
-              <div class="categories">
-                  <div class="category" data-category="clarity">Clarity</div>
-                  <div class="category" data-category="health">Health</div>
-                  <div class="category" data-category="wealth">Wealth</div>
-                  <div class="category active" data-category="relationships">Relationships</div>
-                  <div class="category" data-category="career">Career</div>
-              </div>
+        <div class="categories-container">
+          <div class="solutions-heading">
+            <h2>Scanning Reveals Solutions For:</h2>
           </div>
-          <div class="testimonial-container">
-              <!-- <div class="quote-marks top-left"></div> -->
-              <!-- <div class="quote-marks top-right"></div> -->
-              <!-- <div class="quote-marks bottom-left"></div> -->
-              <!-- <div class="quote-marks bottom-right"></div> -->
-              
-              <div class="testimonial-carousel">
-                  <!-- Testimonials will be loaded here -->
-              </div>
-              
-              <div class="testimonial-author">
-                 <!-- <div class="author-initial"></div> -->
-                  <img src="/placeholder.svg?height=50&width=50" alt="Author" class="author-image">
-                  <div class="author-info">
-                      <div class="author-name">Mbali Morgan, 66</div>
-                      <div class="author-title">Entrepreneur, Jo'burg</div>
-                  </div>
-              </div>
-              
-              <div class="carousel-dots">
-                  <div class="dot active"></div>
-                  <div class="dot"></div>
-                  <div class="dot"></div>
-              </div>
+          <div class="categories">
+            <div class="category" data-category="clarity">Clarity</div>
+            <div class="category" data-category="health">Health</div>
+            <div class="category" data-category="wealth">Wealth</div>
+            <div class="category active" data-category="relationships">Relationships</div>
+            <div class="category" data-category="career">Career</div>
           </div>
+        </div>
+        <div class="testimonial-container">
+          <!-- <div class="quote-marks top-left"></div> -->
+          <!-- <div class="quote-marks top-right"></div> -->
+          <!-- <div class="quote-marks bottom-left"></div> -->
+          <!-- <div class="quote-marks bottom-right"></div> -->
+
+          <div class="testimonial-carousel">
+            <!-- Testimonials will be loaded here -->
+          </div>
+
+          <div class="testimonial-author">
+            <!-- <div class="author-initial"></div> -->
+            <img src="/placeholder.svg?height=50&width=50" alt="Author" class="author-image">
+            <div class="author-info">
+              <div class="author-name">Mbali Morgan, 66</div>
+              <div class="author-title">Entrepreneur, Jo'burg</div>
+            </div>
+          </div>
+
+          <div class="carousel-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
       </div>
-      
+
       <div class="cta-section">
-          <div class="cta-heading">
-              Join thousands who have found peace, direction, and transformation through this <br>profound experience.
-          </div>
-          <button class="cta-button">Book Your Session</button>
+        <div class="cta-heading">
+          Join thousands who have found peace, direction, and transformation through this <br>profound experience.
+        </div>
+        <button class="cta-button">Book Your Session</button>
       </div>
-  </div>
+    </div>
   </section>
 
 
@@ -291,7 +308,7 @@
       <div class="header2">
         <h1 class="title">Our Wall Of Love</h1>
       </div>
-  
+
       <div class="masonry-grid">
         <!-- Testimonial Cards (Repeated 10 times with varying content) -->
         <div class="testimonial-card">
@@ -310,7 +327,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>The instructions were few and they were not complicated, so I followed them. </span>
@@ -327,7 +344,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>The instructions were few and they were not complicated, so I followed them. </span>
@@ -344,12 +361,12 @@
             </div>
           </div>
         </div>
-  
+
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>The instructions were few and they were not complicated, so I followed them. </span>
             <span>And the results were unbelievable.</span>
-  
+
           </div>
           <div class="user-info">
             <img src="https://placehold.co/37x37" class="user-image" alt="User">
@@ -359,30 +376,13 @@
             </div>
           </div>
         </div>
-  
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>The instructions were few and they were not complicated, so I followed them. </span>
-            <span>And the results were unbelievable.</span>
-            <span>I now have more clarity, more serenity, more confidence.</span>
-  
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Mbali Morgan, 66</div>
-              <div class="user-role">Entrepreneur, Jo’burg</div>
-            </div>
-          </div>
-        </div>
-  
+
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>The instructions were few and they were not complicated, so I followed them. </span>
             <span>And the results were unbelievable.</span>
             <span>I now have more clarity, more serenity, more confidence.</span>
-            <span>There's also been a positive shift in a significant relationship.</span>
-            <span>I'm so grateful for this process, thank you.</span>
+
           </div>
           <div class="user-info">
             <img src="https://placehold.co/37x37" class="user-image" alt="User">
@@ -392,8 +392,7 @@
             </div>
           </div>
         </div>
-  
-  
+
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>The instructions were few and they were not complicated, so I followed them. </span>
@@ -410,6 +409,8 @@
             </div>
           </div>
         </div>
+
+
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>The instructions were few and they were not complicated, so I followed them. </span>
@@ -426,11 +427,27 @@
             </div>
           </div>
         </div>
-  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+            <span>There's also been a positive shift in a significant relationship.</span>
+            <span>I'm so grateful for this process, thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan, 66</div>
+              <div class="user-role">Entrepreneur, Jo’burg</div>
+            </div>
+          </div>
+        </div>
+
         <!-- Repeat other testimonial cards here with varying text styles -->
-  
+
       </div>
-  
+
       <div class="button">
         <div class="button-text">Share Your Testimonial</div>
       </div>

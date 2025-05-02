@@ -1,14 +1,42 @@
 const bgVideo = document.getElementById('bgVideo');
 
-// Pause the video on page load
-window.addEventListener('DOMContentLoaded', () => {
-  bgVideo.pause();
-});
+function playFullVideo() {
+  const mainContent = document.getElementById('mainContent');
+  const videoContent = document.getElementById('videoContent');
+  const iframe = document.getElementById('fullVideo');
 
-// Play video when "Know More" button is clicked
-function playBackgroundVideo() {
-  bgVideo.play();
+  mainContent.style.display = 'none';
+  videoContent.style.display = 'flex';
+
+  // Force new video load each time
+  const baseUrl = 'https://www.youtube.com/embed/y34dS0JJ3fg?autoplay=1&mute=1';
+  iframe.src = `${baseUrl}&ts=${Date.now()}`;
 }
+
+function closeVideo() {
+  const mainContent = document.getElementById('mainContent');
+  const videoContent = document.getElementById('videoContent');
+  const iframe = document.getElementById('fullVideo');
+
+  iframe.src = ''; // Clear the video
+  videoContent.style.display = 'none';
+  mainContent.style.display = 'flex';
+}
+
+
+function closeVideo() {
+  const mainContent = document.getElementById('mainContent');
+  const videoContent = document.getElementById('videoContent');
+  const iframe = document.getElementById('fullVideo');
+
+  iframe.src = ''; // remove video
+  videoContent.style.display = 'none';
+  mainContent.style.display = 'flex';
+
+  if (bgVideo) bgVideo.play();
+}
+
+
 
 const tabButtons = document.querySelectorAll('.session-button2');
 const tabContents = document.querySelectorAll('.tab-content');
@@ -54,6 +82,9 @@ tabButtons.forEach(button => {
 });
 
 
+
+
+// FAQ CODE
 function toggleFAQ(element) {
   element.classList.toggle('active');
 }
@@ -67,14 +98,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const testimonials = {
     clarity: [
       {
-        text: "The instructions were few and they were not complicated, so l followed them. And the results were unbelievable. I now have more <span class='highlight'>clarity</span>, more serenity, more confidence. I'm so grateful for this process, thank you.",
-        author: "Sarah Johnson, 42",
+        text: "The instructions were few, they were not complicated, so I followed them. The results were unbelievable. I now have more clarity, more serenity, more confidence. I am so grateful for this process, thank you.",
+        author: "Mbali Morgan",
         title: "Teacher, New York",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        text: "Finding <span class='highlight'>clarity</span> in my life's purpose was something I struggled with for years. This scanning process helped me see things I never noticed before. The fog has lifted.",
-        author: "James Wilson, 38",
+        text: "It gave me so much confidende and clarity and faith. What i heard is something wich really resonates with me and i can already see the changes thas was told to me.",
+        author: "Andrea Markic Vidakovic",
         title: "Software Engineer, Seattle",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
@@ -85,14 +116,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
     health: [
       {
-        text: "My <span class='highlight'>health</span> issues seemed chronic until I tried this scanning solution. The personalized approach helped me identify root causes that doctors had missed for years.",
-        author: "Michael Chen, 45",
+        text: "How he discussed things which are not known to anybody, how he discussed about my health challenges etc is beyond imagination.",
+        author: "Utkarsh Gupta",
         title: "Fitness Coach, Toronto",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        text: "The <span class='highlight'>health</span> benefits I've experienced are remarkable. Sleep quality improved, energy levels increased, and my chronic pain has decreased significantly.",
-        author: "Lisa Rodriguez, 39",
+        text: "I just had a great and very pleasant experience with great insight and practical advice about how to improve my health.",
+        author: "Yelena",
         title: "Nurse Practitioner, Miami",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
@@ -104,14 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
     wealth: [
       {
-        text: "My relationship with <span class='highlight'>wealth</span> has completely transformed. I've broken through limiting beliefs and created new opportunities I never thought possible.",
-        author: "Jennifer Lee, 48",
+        text: "This session improve my positivity, trust and confidence in my daily routine including in my business.",
+        author: "Milú da Graça",
         title: "Financial Advisor, Boston",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        text: "The <span class='highlight'>wealth</span> scanning revealed blocks I didn't know I had. Within months of implementing the solutions, my income doubled and my savings grew.",
-        author: "Robert Miller, 52",
+        text: "I was at a crossroads in life and the advice was very encouraging and made me feel more confident about my financial future.",
+        author: "Janak Naik",
         title: "Entrepreneur, Austin",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
@@ -123,14 +154,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
     relationships: [
       {
-        text: "The instructions were few and they were not complicated, so l followed them. And the results were unbelievable. I now have more clarity, more serenity, more confidence. <span class='highlight'>There's also been a positive shift in a significant relationship</span>. I'm so grateful for this process, thank you.",
-        author: "Mbali Morgan, 66",
+        text: "Yes my scan session has been successful ..my family and our relationship has come together and by your grace is improving",
+        author: "Ashla",
         title: "Entrepreneur, Jo'burg",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        text: "My <span class='highlight'>relationships</span> have deepened in ways I never thought possible. The scanning revealed patterns that were holding me back from true connection.",
-        author: "Thomas Wright, 41",
+        text: "I was sooo confused about my relationship. Within a very short span of time, I got an idea and confidence to move forward.",
+        author: "Anitha Padmanabhan",
         title: "Psychologist, Melbourne",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
@@ -143,14 +174,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     career: [
       {
-        text: "My <span class='highlight'>career</span> was stagnant for years until I discovered this scanning process. Within months, I found my true calling and transitioned to work I love.",
-        author: "Daniel Brown, 49",
+        text: "The 1st person who told me a job offer that would come to me.. And I was like I don't have anything like that nor have I applied for any... few months later  get a random call and it just happened that I joined an esteemed organization.",
+        author: "Dr. Rituparna Saha",
         title: "Former Banker, Now Life Coach",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        text: "The <span class='highlight'>career</span> insights I gained were invaluable. I realized I was in the right field but wrong role. Making that shift has brought fulfillment.",
-        author: "Olivia Martinez, 35",
+        text: "I wanted guidance, firstly on future steps for my career and the clear reply washed away worries I had been harbouring for months.",
+        author: "Sujata",
         title: "Creative Director, Barcelona",
         image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
@@ -223,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
       content = `
         <div class="gif-card">
           <img src="${currentItem.url}" alt="Solution GIF">
-          <div class="gif-caption">See it in action!</div>
+          <div class="gif-caption">watch this space</div>
         </div>
       `;
       // Hide author section for GIFs
