@@ -1,467 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Insight Sessions</title>
-  <link rel="stylesheet" href="style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Playfair+Display:wght@800&family=Raleway:wght@500&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <!-- HOME PAGE -->
-  <section class="HomePage">
-    <!-- Navbar -->
-    <div class="navbar">
-      <img src="/Images/LOGO.png" alt="The Art of Living Logo" />
-      <div class="language-selector">
-        India - English ▼
-      </div>
-    </div>
-
-    <!-- Main Container -->
-    <div class="container1">
-      <div class="background">
-        <div class="overlay"></div>
-        <!-- <video id="bgVideo" loop muted playsinline autoplay>
-          <source src="Untitled design-2.gif" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> -->
-        <img id="bgVideo" src="/Images/Untitled design-2.gif" alt="Background Animation" />
-      </div>
-    
-      <!-- Original Content -->
-      <div class="content1" id="mainContent">
-        <div class="text-section1">
-          <h1>Discover clarity when uncertainty clouds your path.</h1>
-          <p>Scanning reveals what you need to know, when you need it most.</p>
-        </div>
-        <div class="buttons">
-          <button class="book-session">Book Your Session</button>
-          <button class="know-more" onclick="playFullVideo()">
-            <img src="/Images/Vector.png" alt=""> Know More
-          </button>
-        </div>
-      </div>
-    
-      <!-- Video Content -->
-      <div class="video-container" id="videoContent">
-        <button class="close-btn" onclick="closeVideo()">×</button>
-        <iframe 
-        src="https://www.youtube.com/embed/y34dS0JJ3fg?autoplay=1&mute=1"
-          id="fullVideo"
-          width="100%"
-          height="100%"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay"
-        ></iframe>
-      </div>
-    </div>
-    
-  </section>
-
-<!-- INSIGHT SECTION -->
-<section class="insight-section">
-  <section class="header1">
-    <h1>Access Insights From<br>Your Past, Present and Future</h1>
-    <div class="buttons1">
-      <button class="session-button2 active" data-tab="guidance">
-        <h4 class="session-button-text">Intuitive Guidance</h4>
-      </button>
-      <button class="session-button2" data-tab="sessions">
-        <h4 class="session-button-text">1:1 Sessions</h4>
-      </button>
-      <button class="session-button2" data-tab="scheduling">
-        <h4 class="session-button-text">Flexible Scheduling</h4>
-      </button>
-      <button class="session-button2" data-tab="approach">
-        <h4 class="session-button-text">Universal Approach</h4>
-      </button>
-    </div>
-  </section>
-
-  <section class="content">
-    <div class="carousel-wrapper">
-      <div class="carousel-container">
-        <div class="tab-content" id="guidance">
-          <img
-            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>Intuitive Guidance</h2>
-            <p>Tapping into the intuitive space, scanners go beyond subjective information to provide clear, unbiased
-              insights on problems you may be facing.</p>
-            <a href="#" class="book-button">
-              <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-
-        <div class="tab-content" id="sessions">
-          <img
-            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>1:1 Sessions</h2>
-            <p>Within 10-12 minutes, the scanner will connect with your past, present and future to provide
-              personalized guidance.</p>
-            <a href="#" class="book-button">
-              <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-
-        <div class="tab-content" id="scheduling">
-          <img
-            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>Flexible Scheduling</h2>
-            <p>Our digital platform connects you with scanners globally, allowing you to experience scanning in an
-              intimate in-person session or at the convenience of your home</p>
-            <a href="#" class="book-button">
-              <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-
-        <div class="tab-content" id="approach">
-          <img
-            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Lotus Image" class="image">
-          <div class="text">
-            <h2>Universal Approach</h2>
-            <p>We embrace a universal approach, making sure that insights are inclusive, compassionate, and accessible to
-              all individuals.</p>
-            <a href="#" class="book-button">
-              <div class="book-button-text">Book Your Session</div>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      
-    </div>
-    <div class="carousel-nav">
-      <span class="carousel-indicator">1/4</span>
-      <button class="carousel-prev" aria-label="Previous slide">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-      </button>
-      <button class="carousel-next" aria-label="Next slide">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </button>
-    </div>
-  </section>
-</section>
-
-  <!-- Solutions Section -->
-
-  <section>
-    <div class="Solutions-container">
-      <div class="solutions-section">
-        <div class="categories-container">
-          <div class="solutions-heading">
-            <h2>Scanning Reveals Solutions For:</h2>
-          </div>
-          <div class="categories">
-            <div class="category" data-category="clarity">Clarity</div>
-            <div class="category" data-category="health">Health</div>
-            <div class="category" data-category="wealth">Wealth</div>
-            <div class="category active" data-category="relationships">Relationships</div>
-            <div class="category" data-category="career">Career</div>
-          </div>
-        </div>
-        <div class="testimonial-container">
-          <!-- <div class="quote-marks top-left"></div> -->
-          <!-- <div class="quote-marks top-right"></div> -->
-          <!-- <div class="quote-marks bottom-left"></div> -->
-          <!-- <div class="quote-marks bottom-right"></div> -->
-
-          <div class="testimonial-carousel">
-            <!-- Testimonials will be loaded here -->
-          </div>
-
-          <div class="testimonial-author">
-            <!-- <div class="author-initial"></div> -->
-            <img src="/placeholder.svg?height=50&width=50" alt="Author" class="author-image">
-            <div class="author-info">
-              <div class="author-name">Mbali Morgan, 66</div>
-              <div class="author-title">Entrepreneur, Jo'burg</div>
-            </div>
-          </div>
-
-          <div class="carousel-dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-section">
-        <div class="cta-heading">
-          Join thousands who have found peace, direction, and transformation through this <br>profound experience.
-        </div>
-        <button class="cta-button">Book Your Session</button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FAQ -->
-  <section class="FAQ">
-    <div class="faq-container">
-      <div class="faq-title">Frequently Asked Questions</div>
-
-      <!-- Section 1 -->
-      <div class="faq-section">
-        <div class="faq-category">Preparing For Your Session</div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            Do I need to prepare for a scanning session?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            No special preparation is required. Just come with an open mind in a quiet and undisturbed environment.
-          </div>
-        </div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            What information do I need to provide before my session?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            Only basic booking details like name and contact. The scanner connects intuitively with your timeline.
-          </div>
-        </div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            Is there anything I should or shouldn't do before a session?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            Avoid alcohol or substances 24 hours prior. Being well-rested and meditating helps.
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 2 -->
-      <div class="faq-section">
-        <div class="faq-category">Booking & Logistics</div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            Is there a fee for scanning sessions?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            You’ll receive a donation link post-session to contribute any amount towards Art of Living's social
-            projects.
-          </div>
-        </div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            How do I find an available scanner?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            Use our portal to view available scanners. Book at least 1 hour ahead, or 1-2 weeks in advance for some.
-          </div>
-        </div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            What should I do if I need to cancel or reschedule?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            Kindly inform KG via WhatsApp or phone well in advance, so the slot can be reassigned.
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 3 -->
-      <div class="faq-section">
-        <div class="faq-category">Privacy and Follow-up</div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            Is my personal information kept confidential?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            Yes, all information and session content is kept strictly confidential as per our privacy policy.
-          </div>
-        </div>
-
-        <div class="faq-item" onclick="toggleFAQ(this)">
-          <div class="faq-question">
-            Can I repeat a scanning session?
-            <div class="arrow"></div>
-          </div>
-          <div class="faq-answer">
-            Yes, but there should be at least a 30–45 day gap between sessions.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Testinomial -->
-  <section>
-    <div class="container">
-      <div class="header2">
-        <h1 class="title">Our Wall Of Love</h1>
-      </div>
-
-      <div class="masonry-grid">
-        <!-- Testimonial Cards (Repeated 10 times with varying content) -->
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>What a beautiful and magical process. Madhushri/Universe/Gurudev knew exactly where I am at. I am going through life transitions right now.</span>
-            <span>Was able to get more clarity and guidance about my future, ran some of my plans by her and got reassurance about where I am.</span>
-            <span>This touched upon work, health, financials, retirement and other aspects. She very deftly guided the process to touch upon important issues.</span>
-            <span>It is like getting validation from the universe. After the call, I realized I was in tune with a higher power and could trust myself.</span>
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Mou</div>
-              <div class="user-role">Mar 18, 2025</div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>The intuitive description about myself was surprising.</span>
-            <span>I got clarity about some of my subtle desires which were left behind and cleared path.</span>
-            <span>During this guidance felt the presence of Gurudev with goosebumps.</span>
-            <span>It would definitely help to put oneself on expressway. Grateful!</span>
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Aniket N</div>
-              <div class="user-role">Feb 26, 2025</div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>Here is my experience of the Art of Living Kalagyana process, which has been eye-opening every time.</span>
-            <span>It was as if my inner world was being reflected back to me with incredible accuracy.</span>
-            <span>The process helped me see patterns in my life—both strengths and challenges—that I hadn’t fully acknowledged before.</span>
-            <span>I walked away feeling lighter, more aligned, and with a renewed sense of purpose, each time.</span>
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Bhavyata Jethva</div>
-              <div class="user-role">Feb 23, 2025</div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>The instructions were few and they were not complicated, so I followed them. </span>
-            <span>And the results were unbelievable.</span>
-  
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Dharmesh Joshi</div>
-              <div class="user-role">Mar 5, 2025</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>The instructions were few and they were not complicated, so I followed them. </span>
-            <span>And the results were unbelievable.</span>
-            <span>I now have more clarity, more serenity, more confidence.</span>
-  
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Manish Tiwari</div>
-              <div class="user-role">Mar 6, 2025</div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>It was really nice experience with the scanning process. Yes I started recommending it to people.</span>
-            <span>The session provided me strength and inspired me to find the correct way forward.</span>
-            <span>I got motivated to do what I was missing in my life.</span>
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Jayshree Mistry</div>
-              <div class="user-role">Mar 6, 2025</div>
-            </div>
-          </div>
-        </div>
-  
-  
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>It helps me reduce unnecessary stress and anxiety about future.</span>
-            <span>Will definitely recommend to others—in fact, added a couple of people to the scanning group already.</span>
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Chintan Majmudar</div>
-              <div class="user-role">Mar 6, 2025</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            <span>It's the best scan I’ve had so far and the results matched with real experience.</span>
-            <span>I would give 10/10 for the guidance I got from Kal scan. Thanks to Gurudev and the team.</span>
-          </div>
-          <div class="user-info">
-            <img src="https://placehold.co/37x37" class="user-image" alt="User">
-            <div>
-              <div class="user-name">Dinesh</div>
-              <div class="user-role">Mar 6, 2025</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Repeat other testimonial cards here with varying text styles -->
-  
-      </div>
-
-      <div class="button">
-        <div class="button-text">Share Your Testimonial</div>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
-</body>
-
-</html>
 
 <!-- ------------------------------------ -->
 
@@ -807,7 +344,7 @@
             </div>
           </div>
         </div>
-  
+        
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>The intuitive description about myself was surprising.</span>
@@ -823,7 +360,7 @@
             </div>
           </div>
         </div>
-  
+        
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>Here is my experience of the Art of Living Kalagyana process, which has been eye-opening every time.</span>
@@ -839,12 +376,25 @@
             </div>
           </div>
         </div>
-  
+        
         <div class="testimonial-card">
           <div class="testimonial-text">
-            <span>The instructions were few and they were not complicated, so I followed them. </span>
-            <span>And the results were unbelievable.</span>
-  
+            <span>Yes I have already met with Gurudev I felt in scan that Gurudev itself giving answers to me.</span>
+            <span>It was clear session I got my pathan yes im also telling others about session.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dharmesh Joshi</div>
+              <div class="user-role">Mar 5, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Yes its wonderful experience with vivek bhaiya it was Gurudev itself giving answers.</span>
+            <span>I hv already got a chance to meet Gurudev in personal n im giving information about scanning session to all my known people.</span>
           </div>
           <div class="user-info">
             <img src="https://placehold.co/37x37" class="user-image" alt="User">
@@ -857,10 +407,26 @@
 
         <div class="testimonial-card">
           <div class="testimonial-text">
-            <span>The instructions were few and they were not complicated, so I followed them. </span>
-            <span>And the results were unbelievable.</span>
-            <span>I now have more clarity, more serenity, more confidence.</span>
-  
+            <span>ഇന്ന് (05/02/2025) ഗുരുജിയുടെ അനുഗ്രഹത്താൽ സ്കാനിംഗ് പ്രോസസ്സിൽ പങ്കെടുക്കാൻ കഴിഞ്ഞു.</span>
+            <span>മണികണ്ഠൻ സാർ പ്രോസസ്സ് ആരാഭിച്ചത് മുതൽ ഗുരുജി എന്നോട് സംസാരിക്കുന്ന പോലെ ഫീൽ അനുഭവപ്പെട്ടു.</span>
+            <span>എന്തൊക്കെയോ ചോദിക്കണം എന്നു മനസ്സിൽ കുറിച്ചതായിരുന്നു. പക്ഷെ പ്രോസസ്സ് കഴിഞ്ഞതും മനസ്സ് ശൂന്യമായി. ഉള്ളിൽ സന്തോഷം മാത്രമായി.</span>
+            <span>ഇടയ്ക്കിടെ മനസ്സിൽ വരാറുള്ള സ്‌ട്രെസ് പൂർണ്ണമായും മാറിയപോലെ...</span>
+            <span>ആ വിശ്വാസം ഒന്നുടെ ഊട്ടി ഉറപ്പിക്കുന്നതായിരുന്നു ഇന്നത്തെ പ്രോസസ്സ്. എല്ലാത്തിനും നന്ദി.. ജയ് ഗുരുദേവ് 🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">സൈജു എസ് നായർ</div>
+              <div class="user-role">Mar 5, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Hello, I just talked with Sweta. It was nice talking to her, she answered my questions and clarified all my doubts.</span>
+            <span>She managed to point areas which needs improvement, giving examples of situations that happened with me in past.</span>
+            <span>Talking to her helped me get the answers and given me right direction. Thanks again JGD.</span>
           </div>
           <div class="user-info">
             <img src="https://placehold.co/37x37" class="user-image" alt="User">
@@ -870,7 +436,7 @@
             </div>
           </div>
         </div>
-  
+        
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>It was really nice experience with the scanning process. Yes I started recommending it to people.</span>
@@ -885,8 +451,23 @@
             </div>
           </div>
         </div>
-  
-  
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I’m very happy that I did this scanning. It gave me so much confidence and clarity and faith.</span>
+            <span>What I heard really resonates with me and I can already see the changes that were told to me.</span>
+            <span>The scanning is like a GPS and guidance for the future. It gave me clarity for decisions.</span>
+            <span>I also felt much better and lighter after it. I already told several friends to do the scanning. Thank you!</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Andrea Markic Vidakovic</div>
+              <div class="user-role">Mar 6, 2025</div>
+            </div>
+          </div>
+        </div>
+        
         <div class="testimonial-card">
           <div class="testimonial-text">
             <span>It helps me reduce unnecessary stress and anxiety about future.</span>
@@ -911,6 +492,1190 @@
             <div>
               <div class="user-name">Dinesh</div>
               <div class="user-role">Mar 6, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was absolutely a wonderful and incredible experience to undergo the scanning process with Manikandan Sir.</span>
+            <span>Every worry or challenge I was facing was addressed, along with practical remedies.</span>
+            <span>This reassured me that Gurudev is safeguarding me in every aspect of life.</span>
+            <span>It reinforced my understanding that Gurudev is always watching over us. I feel incredibly blessed.</span>
+            <span>Thanks again Manikandan Sir. 🙏🙏🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Smitha Amrutharaj</div>
+              <div class="user-role">Mar 6, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I am very fortunate to have had a scanning session with Aniketbhai. The process was simple and amazing.</span>
+            <span>Aniketbhai was professional, enthusiastic, kind and practical in his advice.</span>
+            <span>His guidance helped me at a crossroads and gave me confidence. Thank you so much 🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Janak Naik</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Started with a beautiful Om chanting, felt very positive during the whole session.</span>
+            <span>I was told two things that only I knew. This session provided great clarity to what was bothering me.</span>
+            <span>I would most definitely recommend this process to others. Immense gratitude to Gurudev for HIS grace upon me.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Manjula Ashok</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I was there with a very sceptical attitude. The very first thing Gauripooja didi said was exactly what I was thinking.</span>
+            <span>She was precise every time. I didn’t speak much—yet she answered all I needed.</span>
+            <span>Deepest of my desires and thoughts were directly caught and guided upon. I felt Gurudev’s presence.</span>
+            <span>I lost all awareness of time and space—it was just Gurudev and me. Very divine experience. Thank you, Gurudev.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Abhishek Jagtap</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I would really recommend a scan. It put me too ease and it was very excited.</span>
+            <span>I now have the tools to deal with my discomfort.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Liza</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The scanning process is amazing.</span>
+            <span>It is unbelievable what can be picked up and to provide guidance and help.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Manisha</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I was very impressed with Mukeshji… he was spot on with my issues and I guess only time will tell with regards to the changes about to come.</span>
+            <span>I would recommend this process to anyone who feels they looking for closure or experiencing difficulty in their lives. It did provided guidance to a certain degree and now it is up to me to be positive and to have faith.. Thank you.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Maya Naran</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>My scanning experience with Mukesh ji was beautiful.</span>
+            <span>He had a very calming presence, gave me the right amount of clarity.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">nikita singh</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I got Clarity and a sense of relief when I got my intuitive Scanning by Mukesh ji.</span>
+            <span>It was like Gurudev is guiding me. I got clarity in my career and would like to take another session also.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Shiva Prasad Das</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was a good experience.</span>
+            <span>I will recommend this process to my friends and relatives. This session provided clarity about my future.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mr Jagdish Patil</div>
+              <div class="user-role">Mar 8, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I had a scanning session with Mukesh ji’s in Nov of last year, it was amazingly accurate.</span>
+            <span>The guidance provided was very helpful. Highly recommend to schedule a session.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Vidya</div>
+              <div class="user-role">Mar 8, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Shampa madam has recently done my scanning. She has given satisfactory answers to my questions.</span>
+            <span>She has also guided me well in the areas where I was feeling stuck. Whatever she was saying was with conviction. I felt so confident after the session. I am grateful that gurudev has organized kaal gyaan sessions that helps us to proceed forward in life with a leap of faith.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Sonam Telrandhe</div>
+              <div class="user-role">Mar 8, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It is very nice experience.</span>
+            <span>Now I am sharing this link to each person I know.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Subin SB</div>
+              <div class="user-role">Mar 9, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>One of my best experience with my gurudev .. I got all answer, Now I am very happy and I got clarity about my life.</span>
+            <span>Thank you gurudev for gave this chance ❤️❤️</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">HARISHMA</div>
+              <div class="user-role">Mar 10, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was absolutely amazing. The process so smooth and beautiful. The meditation with her was deep but still smooth.</span>
+            <span>She definitely provided clarity on the question I was asking. But the things she said during meditation provided more guidance about myself. I recommend everyone who is considering to take this short but effective process.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Belkis Meha</div>
+              <div class="user-role">Mar 11, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Scanning process was an amazing experience. I was going through such a turmoil at work and was unsure of the cause of my emotional instability.</span>
+            <span>Where scanning helped it validated that the external circumstances were difficult and I spent the whole year working in uncomfortable and antagonistic environment. Just that notion that it’s really happening and it is not just my projection helped me to dettach and move forward. Thank you Mukesh for being the vehicle of this amazing process.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Edita Custic Weguelin</div>
+              <div class="user-role">Mar 13, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was really helpful, and gave me knowledge about my future</span>
+            <span>which helped me plan for my life.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Aryan S</div>
+              <div class="user-role">Mar 13, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>This session improve my positivity, trust and confidence in my daily routine including in my business.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Milú da Graça</div>
+              <div class="user-role">Mar 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It's a really wonderful experience at some point in my past life and recently face which is very clear ...</span>
+            <span>I feel very relaxed.. Gurudev Pranam</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Shilpa mahant</div>
+              <div class="user-role">Mar 12, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>My scanning session was great.</span>
+            <span>I was comfortable asking him questions & he was really easy to talk to!</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dalbir</div>
+              <div class="user-role">Mar 14, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>JGD The process was quick but deeply insightful and provided me with the clarity and guidance I sought.</span>
+            <span>What was revealed was 100% accurate and I would highly recommend this process to everyone.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Lorain Ruthilal</div>
+              <div class="user-role">Mar 14, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Overall excellent.</span>
+            <span>Thank you. Jay Gurudev.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Rupal marthak</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Overall experience was good. Vivek ji could pick up my situation and suggested what I could do to overcome it.</span>
+            <span>However I was actually looking forward more. Like straightforward answers. I will recommend this as it helps when someone listens to you. I am still not sure how to go about my life but will remember what I am being told and will work on it.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mitali Kamath</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>My heartfelt Thankyou to Vivekji for KaalGyan session today. 🙏👍 It is a guiding and doubt clearing process I must say. After my first session I was able to raise my voice against the Dishonest Professional Family members/ Trustees. It was to help my husband who is fighting for truth and rightful function in a Public Trust. Majority dishonest / indifferent people who have isolated him so I am supporting him and conveying to him on his behalf though He is the main lead. With full faith in Truth in God in my Gurudev I am moving further... My gratitude to all my earlier Basic course Advance course teachers. Bhanudidi guided me for Sahaj years back. What a graceful time it was... And yes in 2005 TTC was great. So finally I'm feeling grateful to all who have contributed to my well-being and giving breakthrough in the middle of difficult storms throughout my life... Jai Gurudev..🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Sejal Kapadia</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I was having thoughts regarding multiple issues related to everyday life, all were sorted and I felt totally relaxed after the session. Also, I was reassured in the belief that gurudev’s grace is with me and everything has a solution. I recommend to take this session if you have any kind of stress or doubts and follow the remedies kaal gyan teachers suggest.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Anoushka</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The scanning session was really good, this process is really a blessing, it gave a lot of peace of mind, and I heard divine words from Manikandan ji, which cleared all my fears, it gave me a lot clarity in mind. Thank you so much.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Vaishnavi Pillai</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was a great session. Really got the answers for questions which made me anxious. Thank you Sandeep bhaiya for such an amazing scanning session.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Sakshi</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The scanning process gave a good insight for me and clarity of the path ahead. It helped me in understanding my current situation and clarity on how to move forward with confidence. I have already recommended this to my daughter and also recommending to others. Yes the process for sure helped me.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Kiran Rai</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>JGD 🙏🥰 I just had a great and very pleasant experience with Mr. Muhesh. He has given me great insight and practical advice about how to improve my health, finances, and family relationships. I am very grateful and pleasantly surprised. The scan has felt like deep and beautiful meditation 🙏🥰 JGD</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Yelena</div>
+              <div class="user-role">Mar 15, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was an amazing experience. I feel the complete life truth came in front of me. It was a life-changing experience for me. Jai Gurudev.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Rashmi Chatterjee</div>
+              <div class="user-role">Mar 16, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I got answer to all my questions. Feeling relieved and relaxed.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Chintan Majmudar</div>
+              <div class="user-role">Mar 16, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I am Durga from Bhubaneswar. In a crucial phase of life I faced ambiguity to choose a career path. The scanning session with Prativa didi provided me mental clarity and reassurance to proceed in a desirable path. Her guidance will definitely drive me towards success. Her presence filled me up with positivity and enthusiasm. I felt happy and blessed. Jai Gurudev.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Durga Prasad Patra</div>
+              <div class="user-role">Mar 17, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was a beautiful experience for me, no words. I felt so emotional and positive that there’s so much more to be doing, for me. So many unsaid and undone. A clarity for life. 🙏🙏🙏 Thank you. Thank you Manikandan sirji.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Girija Nair</div>
+              <div class="user-role">Mar 3, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I had a very good session with Lucas. As much as I am not into palm reading nor astrology it was a whole different experience! From the minute Lucas started to speak I was like OMG!, how does he even know the things about me. The session gave so much understanding about myself and where I am in my life. Also being a 50-year-old male, it gave me so much enthusiasm about the future to come. Big Thank you to Guru Ji for another phenomenal program given to all of us. Lots of love Rafal</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Rafal Szczypek</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I left the session feeling very uncertain and unconvinced. It was over very quickly, and there were no fireworks, and no mind-blowing words of wisdom. The instructions were few and they were not complicated, so I followed them. And the results were unbelievable. Far more than I had expected. I now have more clarity, more serenity, and more confidence. There's also been a positive shift in a significant relationship. I'm so grateful for this process, thank you Guruji. Jai Gurudev.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mbali Morgan</div>
+              <div class="user-role">Feb 26, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Dear Anish Ji, I am truly grateful for the life scanning session you did for me. It was incredible how you pre-empted three of my five questions even before I asked them! Your insights felt deeply connected to my journey, and the guidance you shared was nothing short of amazing. Gurudev has truly chosen his gems wisely, and through you, his wisdom flows in the most simple yet profoundly impactful way. Thank you for being a channel of such clarity and light. I deeply appreciate your time, presence, and the wisdom you shared. With gratitude, Deepti</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Deepti</div>
+              <div class="user-role">Feb 26, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>We took a scanning session with Rakesh bhaiya today.. The experience cannot be put in words. How he discussed things which are not known to anybody, how he discussed about my health challenges etc is beyond imagination. One thing that stunned me was that in between the session, my husband entered the room and Rakesh bhaiya didn’t know obviously as the camera was towards me. And soon he started talking about him, his challenges, his health etc. I’m grateful beyond words for this beautiful beautiful session by Him. Same experience my husband also had, he is also experiencing the same gratefulness towards the Master for having given us this experience. Thank you so much bhaiya 🙏🏻 Words cannot do justice for what our experience was! 🙏🏻🙏🏻🙏🏻</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Utkarsh Gupta & Amrisha Jain</div>
+              <div class="user-role">Feb 28, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I just went through the scanning process, and I can honestly say it felt like I had just completed a meditation session. It’s amazing how something so simple can bring such a profound sense of clarity and calm. I truly recommend this experience to anyone looking for a moment of tranquility and connection.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dhanya Sisupalan</div>
+              <div class="user-role">Feb 28, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was the best experience of my life. I needed a clear clarity in my life. Gurudev told me this very clearly through the scanning process and all the questions in my mind were answered. This is an opportunity that no one should miss. Everyone should do this as soon as possible. We can see Guruji working through Manikandan Sir with wonder. We need a clarity in life. We can only know through this process how to move forward, how to live, how to do our sadhana seva everything. By doing this, I realized that I am so protected by Guru.❤️ Thank you Gurudev This precious process ✨🙏 Thank you Manikandan Sir❤️</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Devakrishnan</div>
+              <div class="user-role">Feb 28, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Very precise synopsis of my issues was done by Pratibhji. Yes got clarity and confidence too. It certainly helps to move ahead.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Reetika</div>
+              <div class="user-role">Feb 28, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I did scanning because I was directionless. I need some clarity in my present situation. With my scanning process I got clarity and also I felt very settled and calm after my scanning process. Whenever scanner speaks it feels its a different energy, whatever they said I was able to take and follow.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Zobila Sangroula</div>
+              <div class="user-role">Mar 2, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Scanning session provided me clarity of mind. Also got guidance for future decision.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Aashka Jani</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was such a beautiful experience. I personally recommend other people to do the scanning. It has brought lots of clarity to my life. After doing the scanning process and after receiving the answers and putting them into practice I do have a great change in my life. Thank you Guruji for this wonderful experience 💖. JGD</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Nalini Dugroo</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jai Gurudev 🙏 I am feeling so....... Blessed and Protected by My Guruji💓. After My Scanning process I am deeply realising that Guruji was always...... with me. In the process Guruji Himself is speaking through our Manikandan Sir 🙏. Guruji told all the physical and mental issues of mine which I had been going through for so long. And also given me the strength and solutions for all of these 🙏❤️.</span>
+            <span>I Don't even know how to say that, Guruji also knows the small small things of mine. According to everyone I am so emotional and know my guruji asked me to stay strong and I will. After the process I am so clear, solved and focused about my whole life, career, family and studies.</span>
+            <span>Thank you My Dear Guruji for always being with me and protecting me as your own child ❤️🙏😇. And Thank you Manikandan Sir For Giving me Our Guruji's Presence and making me so blessed ❤️🙏.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Krishnendu.M</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Yes, it helped me to know the importance of Sadhana, and to find out the solutions of life problems I am facing. Thank you 😊</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Soumya V S</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Absolutely Divine Experience! I Recommend this Scanning/ Kaal Gyan Process to Everyone. This Scanning/ Kaal Gyan Process with Shampa Sarkar ji gave me 100% Clarity & Guidance.</span>
+            <span>Shampa Di answered All my Queries and gave me Effective Remedies which I am doing Daily and getting Immense Benefits. I am feeling 100% Positive and Free from All Worries about Me and My Dear Ones.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Anandita Bandyopadhyay</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It's Amazing! I recommend this process to everyone. This Scanning/ Kaal Gyan session with Shampa Sarkar di gave me clarity and guidance.</span>
+            <span>She answered my questions with 100% empathy and suggested me solutions for my problems which are very simple and effective. I wish her the best forever.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mamata Bandyopadhyay</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Thanks Shalin Bhaiya, When you spoke and Guided me, I felt I am hearing directly from Gurudev.</span>
+            <span>Everything you said was true and you guided all suggestions with so much love and care. I felt I am speaking to Gurudev and Elder brother. I can not thank Gurudev and you enough 🙏😇</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Praveen K Dubey</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>I was nervous at first but was put at ease right away once we started.</span>
+            <span>I was given some clarity and tasks to do. It was very interesting that someone could see into my past and I am still waiting for what I was told will come my way.</span>
+            <span>All in all a good experience.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Sasha Wainwright</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jgd thank you Gurudev. Yes, my scan session has been successful. My family and our relationship has come together and by your grace is improving.</span>
+            <span>Blessings Mukeshji and my awesome family too. Jgd</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Ashla</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>JGD Mukeshji, I need to thank you for the reading a few months ago. You said this situation that has been a problem for the last 4 years will be resolved before March.</span>
+            <span>Today we got the confirmation that the biggest hurdle has been resolved. I am so grateful. The last 4 stressful years are finally over.</span>
+            <span>I was given the March goal—it gave me all the focus I needed to get everything around that situation sorted out. Once again I am truly grateful to Guruji and to you for being his vessel 🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Chetna</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>100/100. I have already recommended to so many people, and they had the same amazing experience. The session provided A LOT of clarity. My scanner was spot-on on everything that she said. My cluttered mind, suddenly felt at peace right after the session.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Neha Nanda</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was a wonderful experience in all aspects of life whether it is physical or mental health. Yes, I would highly recommend everyone to experience this process for clarity and cleansing of mind and body with grace of Guruji.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Prem Madhuri</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was excellent. My all questions were answered in a manner which relates very very closely with the case. It is as if how come ...he knows all this. Certainly I will recommend this to my near and dear ones. Yes session took off all my stress. It helped me and brought clarity for my confessions. It was as if it was session with Gurudev.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Deepika Chowfla</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Scanning process which I have undergone has given me clarity in areas of life in which I’m concerned more. It has given a guidance to move forward with better understanding.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Amruth</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Good one. Your guidance is valuable for me. I will start following all your instructions. Thank you</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Ashish Rathi</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jgd, Shruti helped me a lot with my patients (Animals dogs, cats, bird). It was wonderful and so correct, I am glad that she is helping me. Being a vet it's really great to get scanned by her. I found her so calm and one of the coolest scanners. The best scanner for sure.. pakka she z d best for humans too 🙂.. I would recommend her to others (already started). Very clear guidance after every scanning session.. blessed to have her. Thank you Shruti 😍🙂🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Swati Jain</div>
+              <div class="user-role">Feb 25, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was really a good experience for me. I just felt every word is coming straight from my guru. I had done my scanning process while I was in a totally confused state. It brings me clarity in my thoughts and guides me to focus on my career. I am really thankful to Manikandan sir for the wonderful session. I am really thankful and grateful to my guru for always guiding me through good direction. I would recommend everyone to do this process at least once. Jaigurudev 🙏😇</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Lekshmi</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Super 👍👍 everything is fact speaking in front of me about future session provide clarity n guidance n I recommend to others</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Palak Dave</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>DEFINITELY, everyone should experience the scanning process .. why not? I got my answers, effortlessly. Made me a happier person, no stress, no crazy vacillation of the mind.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Shivani Datwani</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Good I feel great experience 👍</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Riya Garg</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jai Guru Dev I had undergone Kaalgyan session with Manikandanji. All the messages sir passed to me was a clear guidance for my future. Inspite of not mentioning my family details sir mentioned about my two kids and husband. Above all my astonishment was about Devi devotion I was working on and the assurance of Gurudev's care and blessing for me. I was concerned about my mother’s health and life span she was terminally ill with a heart condition. She took her last breath peacefully hearing devi kavacham. Manikandanji mentioned that she won’t be struggling and asked me to be always with her. I could be beside her during her last moment. She had a blissful Go to the divine. I take this as an opportunity to directly understand Gurudev's communication with us through Manikandan ji. Thank you Guruji and Manikandan Ji 🙏🏻🙏🏻</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Vinitha Viyyath</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was an amazing experience in my life. I feel that Guruji was with me in that process. Jai Gurudev 🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Lissy</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jai Gurudev... had got scanning done by Respected Maladidi Punjabi, for my whole family. And it has been such a wonderful experience. She has been like a guiding star. She has guided us in so many aspects, be it financial investment, children's issues, career decision and lot more... heartfelt thanks to her and Gurudev grace.. words feel short to express our gratitude</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dr. Charmy Bhatt</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was worthwhile and very rewarding. I would recommend this precious process to anyone looking for answers to questions on situations at any point in their lives. I wanted guidance, firstly on future steps for my career and the clear reply washed away worries I had been harbouring for months. Then, there were issues in my close family which the Scanner knew about even before I said anything! She also offered a kind suggestion for my better health that I had not been aware of. My scanner was a young lady but the 10 mins felt like chatting with Gurudev on the darshan line! It was so satisfying and I felt blissfully refreshed and full of gratitude.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Sujata</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The session was good. I was in a confusion whether I should continue my job in IT field or switch to some other area. Sir advised me to continue in the same field.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Swapna Sasikumar</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jaigurudev I had a very good experience by attending this course. I felt a relief after the session. I feel grateful for the opportunity to attend this course.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">K NANDA KISHOR</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It is very helpful for my higher studies and my health issues.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Sai</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>As a whole I got the answer I am in need of. So I am in better clarity now. The process really helped me. Thanks to Gurudev for this wonderful experience. I would definitely suggest the process to everyone.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Barathraj</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Excellent experience. Definitely will recommend this process to others. To some extent I got clarity or guidance.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Rajashree.P</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The experience was truly enriching, providing much-needed clarity on various life pursuits I’ve been struggling with. She was incredibly patient and took the time to address each question intuitively.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Pranit Sigdel</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>This process has provided me with valuable guidance and support. I feel a strong sense of reassurance and protection after undergoing it. I had been going through a challenging few weeks, but after the scanning, I feel renewed, hopeful, and genuinely uplifted.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Amay Sathyan</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jai Gurudev, It was a beautiful experience for me. I was sooo much confused and stuck about my upcoming events (Profession, relationships etc). Within very short span of time, I got an idea and confidence to move forward. I really felt gratitude towards my master for clearing my anxiety by an awaited answer. Definitely I would recommend this scanning process to many more people. Yes.. The session provided clarity and guidance in some of the most important areas of my life and I started to work on it without any doubt.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Anitha Padmanabhan</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was the best experience I had. It was like Gurudev speaking to me. I was worried earlier before the scanning session but when I shared my problems I got so much relief and the answers given to me were so accurate. It is a blessing for those who cannot approach to Gurudev directly. I don't know when problems will sought out but I have the faith that it will do one day definitely. I have become so much positive after that. I recommend this to everyone it is a pure bliss. Thank you so much to Gurudev. Thank you to Radha Mam and Prajwal Sir ❤️❤️❤️❤️❤️❤️</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Yashika Suneja</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Am excited. super</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Sreeragsudev</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jai Gurudev 🙏 I have been waiting for the arrival of Gurudev ever since I registered for the Scanning process of Dr Manikandan ji, Chennai. The Scanning process took place on the evening of the 21st day, which was the time when I regularly attend online Guru Pooja, Sir informed that Scanning process could be done. That in itself was a great surprise and good fortune. It was a great miracle that there were no other problems at home at that time and that all the difficulties had disappeared. Throughout the process, I only felt the presence of Gurudev. Gurudev started talking about things that came from the depths of my mind. I have never met anyone in my life who understood me so much like Gurudev, with so much love and affection. I have received all the answers to all my doubts, questions and concerns I have had in my life through the words of Gurudev. And something I thought would never happen miraculously happened on the second day after the Process. I couldn't answer a question asked by Gurudev, but later I remembered that the incident was about an accident that happened to me many years back. I have asked many times before the Secretariat if I could meet and talk to Gurudev in person, but even if I had, I would not have received such a blessing through this process. I don't have to worry about anything anymore. I wish that many, many people would have this good fortune. I have told many people I know about it. Through this process, I have gained a clear picture of how I want to move forward with my life. I have also gained clarity about how safe and secure I am and how I should approach things. This Scanning process which allows anyone to recognise the Divine presence of Gurudev wherever they are and getting the solution to all their problems is considered the greatest Blessing given by Gurudev. 🙏🙏🙏🙏🙏🙏🙏🙏🙏</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Ragam. J</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Jai Guru Dev, My scanning process truly wonderful experience, incredible, and the Process brought immense peace and clarity to my mind. It was a great blessing to speak Guruji up and receive his blessings. Guruji’s presence This experience has inspired me. A big thank you!</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Ranjani</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Scanning process is a new thing I heared and I wanted to try , I took the session in a playful spirit, without any hope or expectation, it turned out to reveal something which I didn't believe unless it actually happened. The very 1st person who told me about a job offer that would come to me.. And I was like I don't have anything like that or i have not even applied for any... few months later actually I actually get a random call and organically it just happened to me that I joined the esteemed organization. Only person who could forsee that was coming to me was Shruti Sharma when she did the scan. So yes scanning provided guidance and clearity to life.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dr. Rituparna Saha</div>
+              <div class="user-role">Feb 24, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was very calming and insightful. Even aspects of my childhood. A very moving experience. Thank you</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Jo Woods</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Mala ma made me grounded and very comfortable before scanning and she was very polite and patient while listening to my questions and answering them. It was a 10/10 experience with her. I definitely have recommended her sessions to others and would always reccomend them. Each time I take a scanning session from her to get guidance wherever I am stuck, I come out or it with some other different positive outlook and a new fresh perspective with much more clarity about my situation. Whatever she has said till date has always turned out to be true and 100% happened. Thank you so much.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dimple Bhatia</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Experience was amazing. My mind was relaxed and satisfied after the session. The worries that were bothering me were gone. I would definitely recommend the session to others. Yes the session provided clarity to me regarding many aspects of my life. Guidance was given in the areas where I needed. I am grateful to Sorabh Goyal bhaiya for the session. Thank you Jai Gurudev</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Shivangi Tripathi</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>My life is very Critical right now not good time for financial and physical lost of bad thought..</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Nilesh</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The scanning experience was phenomenal and the scanner could tell me specific details about what I am dealing with my life right now. I definitely recommend this to everyone in connect with me. The session helped me take critical decision while not being anxious. It calmed me down while being decisive.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Yatharth Verma</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It's awesome Your mind get relaxed you get some direction in life</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Jacky Athwani</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Shampa Ji helped me and listened to me so calmly, I am glad to have season with her this too happened with Guru's grace🔥🔥🙏 Thankyou Gurudev❤️🙏 I hope my relationship, career and family every issues gets sort out and my spiritual path gets higher and higher🙏🌸</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Christina Bhattarai</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was a good session. I was happy Thank you</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Karuna Munshi</div>
+              <div class="user-role">Feb 7, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The vision of AOL scanners are very intuitive also gives thoughts to ponder on.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Keerthika</div>
+              <div class="user-role">Feb 4, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Loved it! It was a magical process that brought me so much clarity.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Kushal</div>
+              <div class="user-role">Jan 28, 2025</div>
             </div>
           </div>
         </div>
