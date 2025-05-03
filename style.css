@@ -602,7 +602,7 @@ body {
 @media (max-width: 768px) {
   .content {
     margin: 6rem 2rem;
-    padding: 4rem 0.5rem;
+    padding: 7rem 0.3rem;
   }
 
   .tab-content {
