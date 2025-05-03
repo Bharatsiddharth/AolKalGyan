@@ -375,6 +375,7 @@ body {
   text-decoration: none;
   border: none;
   flex-shrink: 0;
+  transition: background-color 0.3s ease;
 }
 
 .session-button-text {
@@ -385,11 +386,11 @@ body {
   text-align: center;
 }
 
-.session-button.active {
+.session-button2.active {
   background: black;
 }
 
-.session-button.active .session-button-text {
+.session-button2.active .session-button-text {
   color: white;
 }
 
@@ -405,24 +406,62 @@ body {
   margin-top: 0;
 }
 
+/* Carousel Styles */
+.carousel-wrapper {
+  width: 100%;
+  max-width: 105rem;
+  position: relative;
+  overflow-x: hidden;
+}
 
-
-/* theme card theme */
-
-
+.carousel-container {
+  display: flex;
+  width: 400%; /* 100% * number of slides */
+  transition: transform 0.5s ease-in-out;
+}
 
 .tab-content {
-  display: none;
+  width: 25%; /* 100% / number of slides */
+  flex-shrink: 0;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 105rem;
   gap: 8.2rem;
-  width: 100%;
   padding: 2rem;
 }
 
-.tab-content.active {
+.carousel-nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.carousel-indicator {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.carousel-prev, .carousel-next {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .image {
@@ -449,7 +488,6 @@ body {
 }
 
 .text p {
-
   font-size: clamp(1.8rem, 2.2vw, 2.8rem);
   font-weight: 500;
   line-height: 1.5;
@@ -479,7 +517,6 @@ body {
   text-align: center;
 }
 
-
 /* 1st Card Theme */
 .tab-content:nth-child(1) .text h2 {
   color: #D4AF37;
@@ -494,7 +531,6 @@ body {
 }
 
 /* 2nd Card Theme */
-
 .tab-content:nth-child(2) .text h2 {
   color: #D4AF37;
 }
@@ -555,7 +591,6 @@ body {
     height: 6rem;
     /* slightly smaller height */
     padding: 1.4rem;
-
   }
 
   .session-button-text {
@@ -567,14 +602,13 @@ body {
 @media (max-width: 768px) {
   .content {
     margin: 6rem 2rem;
-    padding: 4rem 1rem;
+    padding: 4rem 0.5rem;
   }
 
   .tab-content {
     gap: 3rem;
     padding: 1rem;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -598,7 +632,6 @@ body {
     height: 4.8rem;
     /* slightly smaller height */
     padding: 0.8rem;
-
   }
 
   .session-button-text {
@@ -607,15 +640,12 @@ body {
   }
 }
 
-/* Touch optimization */
 @media (hover: none) {
-
   button,
   .book-button {
     min-height: 4.8rem;
   }
 }
-
 
 
 

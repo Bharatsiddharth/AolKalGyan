@@ -37,10 +37,13 @@ function closeVideo() {
 }
 
 
-
 const tabButtons = document.querySelectorAll('.session-button2');
 const tabContents = document.querySelectorAll('.tab-content');
 const content = document.querySelector('.content');
+const carouselContainer = document.querySelector('.carousel-container');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
+const indicator = document.querySelector('.carousel-indicator');
 
 // Backgrounds for different tabs
 const bgColors = {
@@ -50,6 +53,9 @@ const bgColors = {
   approach: '#2D1A2F'
 };
 
+let currentIndex = 0;
+const totalSlides = tabContents.length;
+
 // Function to update background
 function updateBackground(tabId) {
   const bg = bgColors[tabId];
@@ -58,31 +64,86 @@ function updateBackground(tabId) {
   }
 }
 
-// Set initial background based on the active tab
-const initialActiveTab = document.querySelector('.tab-content.active');
-if (initialActiveTab) {
-  updateBackground(initialActiveTab.id);
+// Function to update indicator
+function updateIndicator() {
+  indicator.textContent = `${currentIndex + 1}/${totalSlides}`;
 }
 
-// On click
-tabButtons.forEach(button => {
+// Function to go to a specific slide
+function goToSlide(index) {
+  // Ensure index is within bounds
+  if (index < 0) index = totalSlides - 1;
+  if (index >= totalSlides) index = 0;
+  
+  currentIndex = index;
+  
+  // Remove active class from all buttons
+  tabButtons.forEach(btn => btn.classList.remove('active'));
+  
+  // Add active class to current button
+  tabButtons[currentIndex].classList.add('active');
+  
+  // Move the carousel
+  const translateValue = -currentIndex * 25; // 25% per slide
+  carouselContainer.style.transform = `translateX(${translateValue}%)`;
+  
+  // Update background and indicator
+  const tabId = tabButtons[currentIndex].getAttribute('data-tab');
+  updateBackground(tabId);
+  updateIndicator();
+}
+
+// Set initial slide
+goToSlide(0);
+
+// Event listeners for tab buttons
+tabButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
-    // Remove active classes
-    tabButtons.forEach(btn => btn.classList.remove('active'));
-    tabContents.forEach(content => content.classList.remove('active'));
-
-    // Add active to clicked button and related content
-    button.classList.add('active');
-    const tabId = button.getAttribute('data-tab');
-    document.getElementById(tabId).classList.add('active');
-
-    // Update background based on active tab
-    updateBackground(tabId);
+    goToSlide(index);
   });
 });
 
+// Event listeners for prev/next buttons
+prevButton.addEventListener('click', () => {
+  goToSlide(currentIndex - 1);
+});
 
+nextButton.addEventListener('click', () => {
+  goToSlide(currentIndex + 1);
+});
 
+// Optional: Add keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') {
+    goToSlide(currentIndex - 1);
+  } else if (e.key === 'ArrowRight') {
+    goToSlide(currentIndex + 1);
+  }
+});
+
+// Optional: Add swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+carouselContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+carouselContainer.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+  if (touchEndX < touchStartX - swipeThreshold) {
+    // Swipe left - go to next slide
+    goToSlide(currentIndex + 1);
+  } else if (touchEndX > touchStartX + swipeThreshold) {
+    // Swipe right - go to previous slide
+    goToSlide(currentIndex - 1);
+  }
+}
 
 // FAQ CODE
 function toggleFAQ(element) {
@@ -111,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         type: 'gif',
-        url: '/earth-5498_256.gif'
+        url: '/images/earth-5498_256.gif'
       }
     ],
     health: [
@@ -130,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
      
       {
         type: 'gif',
-        url: '/earth-5498_256.gif'
+        url: '/images/earth-5498_256.gif'
       }
     ],
     wealth: [
@@ -149,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
      
       {
         type: 'gif',
-        url: '/earth-5498_256.gif'
+        url: '/images/earth-5498_256.gif'
       }
     ],
     relationships: [
@@ -168,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       {
         type: 'gif',
-        url: '/earth-5498_256.gif'
+        url: '/images/earth-5498_256.gif'
       }
     ],
 
@@ -189,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       {
         type: 'gif',
-        url: '/earth-5498_256.gif'
+        url: '/images/earth-5498_256.gif'
       }
     ],
   }
