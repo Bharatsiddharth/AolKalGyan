@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         type: 'gif',
-        url: '/images/earth-5498_256.gif'
+        url: '/Images/earth-5498_256.gif'
       }
     ],
     health: [
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
      
       {
         type: 'gif',
-        url: '/images/earth-5498_256.gif'
+        url: '/Images/earth-5498_256.gif'
       }
     ],
     wealth: [
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
      
       {
         type: 'gif',
-        url: '/images/earth-5498_256.gif'
+        url: '/Images/earth-5498_256.gif'
       }
     ],
     relationships: [
@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       {
         type: 'gif',
-        url: '/images/earth-5498_256.gif'
+        url: '/Images/earth-5498_256.gif'
       }
     ],
 
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       {
         type: 'gif',
-        url: '/images/earth-5498_256.gif'
+        url: '/Images/earth-5498_256.gif'
       }
     ],
   }
