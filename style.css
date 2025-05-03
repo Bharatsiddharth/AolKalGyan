@@ -936,6 +936,19 @@ body {
   font-weight: 700;
 }
 
+.user-initials {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+  margin-right: 10px;
+}
+
 .user-role {
   color: #777777;
   font-size: 1.2rem;
@@ -1138,7 +1151,7 @@ body {
 
 .testimonial {
   font-size: 28px;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-weight: 500;
   line-height: 40px;
   color: #333333;

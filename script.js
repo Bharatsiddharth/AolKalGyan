@@ -1,3 +1,5 @@
+//Hero Section - Homepage
+
 const bgVideo = document.getElementById('bgVideo');
 
 function playFullVideo() {
@@ -35,6 +37,12 @@ function closeVideo() {
 
   if (bgVideo) bgVideo.play();
 }
+
+
+
+
+
+//Insights Section
 
 
 const tabButtons = document.querySelectorAll('.session-button2');
@@ -145,15 +153,18 @@ function handleSwipe() {
   }
 }
 
-// FAQ CODE
+
+
+
+
+
+// FAQ Section
 function toggleFAQ(element) {
   element.classList.toggle('active');
 }
 
 
-
-
-
+// Benefits Solutions Page 
 document.addEventListener("DOMContentLoaded", () => {
   // Testimonial data for each category
   const testimonials = {
