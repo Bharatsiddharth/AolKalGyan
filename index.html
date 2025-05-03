@@ -463,3 +463,470 @@
 
 </html>
 
+<!-- ------------------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insight Sessions</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Playfair+Display:wght@800&family=Raleway:wght@500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- HOME PAGE -->
+  <section class="HomePage">
+    <!-- Navbar -->
+    <div class="navbar">
+      <img src="/Images/LOGO.png" alt="The Art of Living Logo" />
+      <div class="language-selector">
+        India - English ▼
+      </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container1">
+      <div class="background">
+        <div class="overlay"></div>
+        <!-- <video id="bgVideo" loop muted playsinline autoplay>
+          <source src="Untitled design-2.gif" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> -->
+        <img id="bgVideo" src="/Images/Untitled design-2.gif" alt="Background Animation" />
+      </div>
+    
+      <!-- Original Content -->
+      <div class="content1" id="mainContent">
+        <div class="text-section1">
+          <h1>Discover clarity when uncertainty clouds your path.</h1>
+          <p>Scanning reveals what you need to know, when you need it most.</p>
+        </div>
+        <div class="buttons">
+          <button class="book-session">Book Your Session</button>
+          <button class="know-more" onclick="playFullVideo()">
+            <img src="/Images/Vector.png" alt=""> Know More
+          </button>
+        </div>
+      </div>
+    
+      <!-- Video Content -->
+      <div class="video-container" id="videoContent">
+        <button class="close-btn" onclick="closeVideo()">×</button>
+        <iframe 
+        src="https://www.youtube.com/embed/y34dS0JJ3fg?autoplay=1&mute=1"
+          id="fullVideo"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allowfullscreen
+          allow="autoplay"
+        ></iframe>
+      </div>
+    </div>
+    
+  </section>
+
+<!-- INSIGHT SECTION -->
+<section class="insight-section">
+  <section class="header1">
+    <h1>Access Insights From<br>Your Past, Present and Future</h1>
+    <div class="buttons1">
+      <button class="session-button2 active" data-tab="guidance">
+        <h4 class="session-button-text">Intuitive Guidance</h4>
+      </button>
+      <button class="session-button2" data-tab="sessions">
+        <h4 class="session-button-text">1:1 Sessions</h4>
+      </button>
+      <button class="session-button2" data-tab="scheduling">
+        <h4 class="session-button-text">Flexible Scheduling</h4>
+      </button>
+      <button class="session-button2" data-tab="approach">
+        <h4 class="session-button-text">Universal Approach</h4>
+      </button>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="carousel-wrapper">
+      <div class="carousel-container">
+        <div class="tab-content" id="guidance">
+          <img
+            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Lotus Image" class="image">
+          <div class="text">
+            <h2>Intuitive Guidance</h2>
+            <p>Tapping into the intuitive space, scanners go beyond subjective information to provide clear, unbiased
+              insights on problems you may be facing.</p>
+            <a href="#" class="book-button">
+              <div class="book-button-text">Book Your Session</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-content" id="sessions">
+          <img
+            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Lotus Image" class="image">
+          <div class="text">
+            <h2>1:1 Sessions</h2>
+            <p>Within 10-12 minutes, the scanner will connect with your past, present and future to provide
+              personalized guidance.</p>
+            <a href="#" class="book-button">
+              <div class="book-button-text">Book Your Session</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-content" id="scheduling">
+          <img
+            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Lotus Image" class="image">
+          <div class="text">
+            <h2>Flexible Scheduling</h2>
+            <p>Our digital platform connects you with scanners globally, allowing you to experience scanning in an
+              intimate in-person session or at the convenience of your home</p>
+            <a href="#" class="book-button">
+              <div class="book-button-text">Book Your Session</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-content" id="approach">
+          <img
+            src="https://images.unsplash.com/photo-1716118316368-0dbb6496cc9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Lotus Image" class="image">
+          <div class="text">
+            <h2>Universal Approach</h2>
+            <p>We embrace a universal approach, making sure that insights are inclusive, compassionate, and accessible to
+              all individuals.</p>
+            <a href="#" class="book-button">
+              <div class="book-button-text">Book Your Session</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="carousel-nav">
+      <span class="carousel-indicator">1/4</span>
+      <button class="carousel-prev" aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="carousel-next" aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+</section>
+
+  <!-- Solutions Section -->
+
+  <section>
+    <div class="Solutions-container">
+      <div class="solutions-section">
+        <div class="categories-container">
+          <div class="solutions-heading">
+            <h2>Scanning Reveals Solutions For:</h2>
+          </div>
+          <div class="categories">
+            <div class="category" data-category="clarity">Clarity</div>
+            <div class="category" data-category="health">Health</div>
+            <div class="category" data-category="wealth">Wealth</div>
+            <div class="category active" data-category="relationships">Relationships</div>
+            <div class="category" data-category="career">Career</div>
+          </div>
+        </div>
+        <div class="testimonial-container">
+          <!-- <div class="quote-marks top-left"></div> -->
+          <!-- <div class="quote-marks top-right"></div> -->
+          <!-- <div class="quote-marks bottom-left"></div> -->
+          <!-- <div class="quote-marks bottom-right"></div> -->
+
+          <div class="testimonial-carousel">
+            <!-- Testimonials will be loaded here -->
+          </div>
+
+          <div class="testimonial-author">
+            <!-- <div class="author-initial"></div> -->
+            <img src="/placeholder.svg?height=50&width=50" alt="Author" class="author-image">
+            <div class="author-info">
+              <div class="author-name">Mbali Morgan, 66</div>
+              <div class="author-title">Entrepreneur, Jo'burg</div>
+            </div>
+          </div>
+
+          <div class="carousel-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <div class="cta-heading">
+          Join thousands who have found peace, direction, and transformation through this <br>profound experience.
+        </div>
+        <button class="cta-button">Book Your Session</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="FAQ">
+    <div class="faq-container">
+      <div class="faq-title">Frequently Asked Questions</div>
+
+      <!-- Section 1 -->
+      <div class="faq-section">
+        <div class="faq-category">Preparing For Your Session</div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Do I need to prepare for a scanning session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            No special preparation is required. Just come with an open mind in a quiet and undisturbed environment.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            What information do I need to provide before my session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Only basic booking details like name and contact. The scanner connects intuitively with your timeline.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Is there anything I should or shouldn't do before a session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Avoid alcohol or substances 24 hours prior. Being well-rested and meditating helps.
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="faq-section">
+        <div class="faq-category">Booking & Logistics</div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Is there a fee for scanning sessions?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            You’ll receive a donation link post-session to contribute any amount towards Art of Living's social
+            projects.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            How do I find an available scanner?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Use our portal to view available scanners. Book at least 1 hour ahead, or 1-2 weeks in advance for some.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            What should I do if I need to cancel or reschedule?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Kindly inform KG via WhatsApp or phone well in advance, so the slot can be reassigned.
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="faq-section">
+        <div class="faq-category">Privacy and Follow-up</div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Is my personal information kept confidential?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Yes, all information and session content is kept strictly confidential as per our privacy policy.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Can I repeat a scanning session?
+            <div class="arrow"></div>
+          </div>
+          <div class="faq-answer">
+            Yes, but there should be at least a 30–45 day gap between sessions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testinomial -->
+  <section>
+    <div class="container">
+      <div class="header2">
+        <h1 class="title">Our Wall Of Love</h1>
+      </div>
+
+      <div class="masonry-grid">
+        <!-- Testimonial Cards (Repeated 10 times with varying content) -->
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>What a beautiful and magical process. Madhushri/Universe/Gurudev knew exactly where I am at. I am going through life transitions right now.</span>
+            <span>Was able to get more clarity and guidance about my future, ran some of my plans by her and got reassurance about where I am.</span>
+            <span>This touched upon work, health, financials, retirement and other aspects. She very deftly guided the process to touch upon important issues.</span>
+            <span>It is like getting validation from the universe. After the call, I realized I was in tune with a higher power and could trust myself.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Mou</div>
+              <div class="user-role">Mar 18, 2025</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The intuitive description about myself was surprising.</span>
+            <span>I got clarity about some of my subtle desires which were left behind and cleared path.</span>
+            <span>During this guidance felt the presence of Gurudev with goosebumps.</span>
+            <span>It would definitely help to put oneself on expressway. Grateful!</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Aniket N</div>
+              <div class="user-role">Feb 26, 2025</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>Here is my experience of the Art of Living Kalagyana process, which has been eye-opening every time.</span>
+            <span>It was as if my inner world was being reflected back to me with incredible accuracy.</span>
+            <span>The process helped me see patterns in my life—both strengths and challenges—that I hadn’t fully acknowledged before.</span>
+            <span>I walked away feeling lighter, more aligned, and with a renewed sense of purpose, each time.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Bhavyata Jethva</div>
+              <div class="user-role">Feb 23, 2025</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+  
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dharmesh Joshi</div>
+              <div class="user-role">Mar 5, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>The instructions were few and they were not complicated, so I followed them. </span>
+            <span>And the results were unbelievable.</span>
+            <span>I now have more clarity, more serenity, more confidence.</span>
+  
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Manish Tiwari</div>
+              <div class="user-role">Mar 6, 2025</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It was really nice experience with the scanning process. Yes I started recommending it to people.</span>
+            <span>The session provided me strength and inspired me to find the correct way forward.</span>
+            <span>I got motivated to do what I was missing in my life.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Jayshree Mistry</div>
+              <div class="user-role">Mar 6, 2025</div>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It helps me reduce unnecessary stress and anxiety about future.</span>
+            <span>Will definitely recommend to others—in fact, added a couple of people to the scanning group already.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Chintan Majmudar</div>
+              <div class="user-role">Mar 6, 2025</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            <span>It's the best scan I’ve had so far and the results matched with real experience.</span>
+            <span>I would give 10/10 for the guidance I got from Kal scan. Thanks to Gurudev and the team.</span>
+          </div>
+          <div class="user-info">
+            <img src="https://placehold.co/37x37" class="user-image" alt="User">
+            <div>
+              <div class="user-name">Dinesh</div>
+              <div class="user-role">Mar 6, 2025</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Repeat other testimonial cards here with varying text styles -->
+  
+      </div>
+
+      <div class="button">
+        <div class="button-text">Share Your Testimonial</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
